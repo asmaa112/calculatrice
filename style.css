@@ -1,0 +1,40 @@
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#result{    
+    height: 79px;
+    width: 263px;
+    padding: 21px;
+    font-size: 37px;
+    margin-bottom: 22px;
+    border-radius: 16px;
+      border: solid 2px white;
+    background-color: black;
+    color: white;
+}
+.numbers{
+    border: solid 2px white;
+    width: 280px;
+    padding: 14px;
+    border-radius: 16px;
+}
+.num{
+    width: 52px;
+    font-size: 24px;
+     margin: 7px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border: solid 2px white;
+}
+.all{
+    border: solid 2px white;
+    width: 308px;
+    padding: 15px;
+    border-radius: 16px;
+}

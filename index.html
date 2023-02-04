@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="all">
+        <input id="result" >
+    <div class="numbers">
+    <input class="num" type="button" id="0" value="0" onclick="afficher(this.id)">
+    <input class="num" type="button" id="1" value="1" onclick="afficher(this.id)">
+    <input class="num" type="button" id="2" value="2" onclick="afficher(this.id)">
+    <input class="num" type="button" id="3" value="3" onclick="afficher(this.id)">
+    <input class="num" type="button" id="4" value="4" onclick="afficher(this.id)">
+    <input class="num" type="button" id="5" value="5" onclick="afficher(this.id)">
+    <input class="num" type="button" id="6" value="6" onclick="afficher(this.id)">
+    <input class="num" type="button" id="7" value="7" onclick="afficher(this.id)">
+    <input class="num" type="button" id="8" value="8" onclick="afficher(this.id)">
+    <input class="num" type="button" id="9" value="9" onclick="afficher(this.id)">
+
+    <input class="num" type="button" id="+" value="+" onclick="afficher(this.id)" >
+    <input class="num" type="button" id="-" value="-" onclick="afficher(this.id)" >
+    <input class="num" type="button" id="*" value="*" onclick="afficher(this.id)" >
+    <input class="num" type="button" id="/" value="/" onclick="afficher(this.id)" >
+    
+    <input class="num" type="button" id="=" value="=" onclick="calc(this.id)">
+    <input class="num" type="button" id="c" value="c" onclick="remover(this.id)">
+    </div>
+</div>
+    <script>
+        let num = ""
+        let result = document.getElementById("result")
+        let egual = document.getElementById("=")
+        let plus = document.getElementById("+")
+        let minus = document.getElementById("-")
+        let fois = document.getElementById("*")
+        let sur = document.getElementById("/")
+        egual.disabled = true
+        plus.disabled = true
+        minus.disabled = true
+        fois.disabled = true
+        sur.disabled = true
+        function afficher(id){
+            num = num + id
+            result.value = num
+            let last = num.slice(-1)
+            if(last == "+" )
+            {
+                egual.disabled = true
+                plus.disabled = true
+                minus.disabled = true
+                fois.disabled = true
+                sur.disabled = true
+            }
+            else{
+                egual.disabled = false
+                plus.disabled = false
+                minus.disabled = false
+                fois.disabled = false
+                sur.disabled = false
+
+            }
+        } 
+        function calc(){
+            result.value = eval(num)
+            num = eval(num)
+        }
+        function remover(id){
+           num = ""
+           result.value = ""
+        }
+    </script>
+</body>
+</html>
